@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>LoveGuardian Dashboard</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>LoveGuardian Parent Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
 </head>
 <body>
-<h1>Parent Dashboard</h1>
+  <h1>👨‍👩‍👧 Live Child Tracker</h1>
+  <div id="map"></div>
+  <div id="audio-section">
+    <h2>🎧 Live Audio Feed</h2>
+    <audio id="audioPlayer" controls></audio>
+  </div>
 
-<h2>Child List:</h2>
-<ul id="child-list"></ul>
-
-<h2>Location Updates:</h2>
-<div id="location-log"></div>
-
-<h2>SMS Logs:</h2>
-<div id="sms-log"></div>
-
-<h2>Call Logs:</h2>
-<div id="call-log"></div>
-
-<script src="/socket.io/socket.io.js"></script>
-<script src="dashboard.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
